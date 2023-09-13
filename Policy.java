@@ -1,5 +1,4 @@
 public class Policy {
-
     int policyNum;
     String providerName;
     
@@ -41,6 +40,38 @@ public class Policy {
         this.policyHolderHeightInches = policyHolderHeightInches;
         this.policyHolderWeightPounds = policyHolderWeightPounds;
     }
+
+    public int getPolicyNum() {
+        return policyNum;
+    }
+
+    public String getProviderName() {
+        return providerName;
+    }
+
+    public String getPolicyHolderFirstName() {
+        return policyHolderFirstName;
+    }
+
+    public String getPolicyHolderLastName() {
+        return policyHolderLastName;
+    }
+
+    public int getPolicyHolderAge() {
+        return policyHolderAge;
+    }
+
+    public String getPolicyHolderSmokingStatus() {
+        return policyHolderSmokingStatus;
+    }
+
+    public double getPolicyHolderHeightInches() {
+        return policyHolderHeightInches;
+    }
+
+    public double getPolicyHolderWeightPounds() {
+        return policyHolderWeightPounds;
+    }
     
     public double calcPolicyHolderBMI() {
         return (policyHolderWeightPounds * 703 ) / (Math.pow(policyHolderHeightInches, 2));
@@ -75,5 +106,5 @@ public class Policy {
         }
         
         return totalPrice;
-    }
+    } 
 }
