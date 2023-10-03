@@ -61,7 +61,7 @@ public class Policy {
         return policyHolderAge;
     }
 
-    public String getPolicyHolderSmokingStatus() {
+    public String getSmokingStatus() {
         return policyHolderSmokingStatus;
     }
 

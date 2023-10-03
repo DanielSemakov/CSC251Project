@@ -65,7 +65,7 @@ public class Project_daniel_semakov {
       int numNonSmokers = 0;
       
       for (Policy policy: policies) {
-         if (policy.getPolicyHolderSmokingStatus().equals("smoker")) {
+         if (policy.getSmokingStatus().equals("smoker")) {
             numSmokers++;
          } else {
             numNonSmokers++;
