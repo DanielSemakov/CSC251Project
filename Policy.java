@@ -12,17 +12,17 @@ public class Policy {
     private double policyHolderWeightPounds;
     
     public Policy() {
-        policyNum = 1234;
-        providerName = "State Farm";
+        policyNum = 0;
+        providerName = "";
         
-        policyHolderFirstName = "John";
-        policyHolderLastName = "Doe";
-        policyHolderAge = 24;
+        policyHolderFirstName = "";
+        policyHolderLastName = "";
+        policyHolderAge = 0;
         
-        policyHolderSmokingStatus = "non-smoker";
+        policyHolderSmokingStatus = "";
         
-        policyHolderHeightInches = 62;
-        policyHolderWeightPounds = 250.5;
+        policyHolderHeightInches = 0;
+        policyHolderWeightPounds = 0;
     }
 
     public Policy(int policyNum, String providerName, String policyHolderFirstName, 
