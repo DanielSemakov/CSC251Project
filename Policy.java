@@ -1,15 +1,15 @@
 public class Policy {
-    int policyNum;
-    String providerName;
+    private int policyNum;
+    private String providerName;
     
-    String policyHolderFirstName;
-    String policyHolderLastName;
-    int policyHolderAge;
+    private String policyHolderFirstName;
+    private String policyHolderLastName;
+    private int policyHolderAge;
     
-    String policyHolderSmokingStatus;
+    private String policyHolderSmokingStatus;
     
-    double policyHolderHeightInches;
-    double policyHolderWeightPounds;
+    private double policyHolderHeightInches;
+    private double policyHolderWeightPounds;
     
     public Policy() {
         policyNum = 1234;
