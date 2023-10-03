@@ -50,7 +50,7 @@ public class Project_daniel_semakov {
           System.out.printf("Policyholder's Last Name: %s%n", policy.getPolicyHolderLastName());
           System.out.printf("Policyholder's Age: %d%n", policy.getPolicyHolderAge());
 
-          System.out.printf("Policyholder's Smoking Status: %s%n", policy.getPolicyHolderSmokingStatus());
+          System.out.printf("Policyholder's Smoking Status: %s%n", policy.getSmokingStatus());
 
           System.out.printf("Policyholder's Height: %.1f inches%n", policy.getPolicyHolderHeightInches());
           System.out.printf("Policyholder's Weight: %.1f pounds%n", policy.getPolicyHolderWeightPounds());
@@ -61,6 +61,10 @@ public class Project_daniel_semakov {
           System.out.println();
       }
       
+      displaySmokingStatuses(policies);
+   }
+   
+   public static void displaySmokingStatuses(ArrayList<Policy> policies) {
       int numSmokers = 0;
       int numNonSmokers = 0;
       
