@@ -11,6 +11,9 @@ public class Policy {
     private double policyHolderHeightInches;
     private double policyHolderWeightPounds;
     
+    /**
+    Assign default values to fields
+    */
     public Policy() {
         policyNum = 0;
         providerName = "";
@@ -25,6 +28,9 @@ public class Policy {
         policyHolderWeightPounds = 0;
     }
 
+    /**
+    Assign inputted values to all fields
+    */
     public Policy(int policyNum, String providerName, String policyHolderFirstName, 
             String policyHolderLastName, int policyHolderAge, String policyHolderSmokingStatus, 
             double policyHolderHeightInches, double policyHolderWeightPounds) {
@@ -73,12 +79,19 @@ public class Policy {
         return policyHolderWeightPounds;
     }
     
+    /**
+    Calculates and returns the policyholder's BMI based on their height and weight
+    
+    @return the policyholder's BMI
+    */
     public double getPolicyHolderBMI() {
         return (policyHolderWeightPounds * 703 ) / (Math.pow(policyHolderHeightInches, 2));
     }
     
     /**
     Calculates and returns the insurance policy's price in U.S. Dollars.
+    
+    @return price in USD
     */
     public double getPrice() {
         double totalPrice = 0;
