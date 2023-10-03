@@ -1,15 +1,15 @@
 public class Policy {
-    private int policyNum;
-    private String providerName;
+    int policyNum;
+    String providerName;
     
-    private String policyHolderFirstName;
-    private String policyHolderLastName;
-    private int policyHolderAge;
+    String policyHolderFirstName;
+    String policyHolderLastName;
+    int policyHolderAge;
     
-    private String policyHolderSmokingStatus;
+    String policyHolderSmokingStatus;
     
-    private double policyHolderHeightInches;
-    private double policyHolderWeightPounds;
+    double policyHolderHeightInches;
+    double policyHolderWeightPounds;
     
     public Policy() {
         policyNum = 1234;
@@ -73,15 +73,15 @@ public class Policy {
         return policyHolderWeightPounds;
     }
     
-    public double calcPolicyHolderBMI() {
+    public double getPolicyHolderBMI() {
         return (policyHolderWeightPounds * 703 ) / (Math.pow(policyHolderHeightInches, 2));
     }
     
     /**
     Calculates and returns the insurance policy's price in U.S. Dollars.
     */
-    public int calcPrice() {
-        int totalPrice = 0;
+    public double getPrice() {
+        double totalPrice = 0;
         
         final int BASE_FEE = 600;
         totalPrice += BASE_FEE;
@@ -100,8 +100,8 @@ public class Policy {
         
         final int MIN_HIGH_BMI_LIMIT = 35;
         
-        if (calcPolicyHolderBMI() > MIN_HIGH_BMI_LIMIT) {
-            final double HIGH_BMI_FEE = (calcPolicyHolderBMI() - 35) * 20;
+        if (getPolicyHolderBMI() > MIN_HIGH_BMI_LIMIT) {
+            final double HIGH_BMI_FEE = (getPolicyHolderBMI() - 35) * 20;
             totalPrice += HIGH_BMI_FEE;
         }
         
