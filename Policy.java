@@ -30,7 +30,17 @@ public class Policy {
 
     /**
     Assign inputted values to all fields
+    
+    @param policyNum
+    @param providerName
+    @param policyHolderFirstName
+    @param policyHolderLastName
+    @param policyHolderAge
+    @param policyHolderSmokingStatus
+    @param policyHolderHeightInches
+    @param policyHolderWeightPounds
     */
+
     public Policy(int policyNum, String providerName, String policyHolderFirstName, 
             String policyHolderLastName, int policyHolderAge, String policyHolderSmokingStatus, 
             double policyHolderHeightInches, double policyHolderWeightPounds) {
