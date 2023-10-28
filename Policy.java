@@ -3,6 +3,8 @@ public class Policy {
     private String providerName;
     private PolicyHolder policyHolder;
     
+    private static int numPolicyObjects = 0;
+    
     /**
     Assign default values to fields
     */
@@ -10,6 +12,8 @@ public class Policy {
         policyNum = 0;
         providerName = "";
         policyHolder = new PolicyHolder();
+        
+        numPolicyObjects++;
     }
 
     /**
@@ -24,6 +28,8 @@ public class Policy {
         this.policyNum = policyNum;
         this.providerName = providerName;
         this.policyHolder = policyHolder;
+        
+        numPolicyObjects++;
     }
 
     public int getPolicyNum() {
