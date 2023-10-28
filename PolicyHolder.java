@@ -1,61 +1,61 @@
 public class PolicyHolder {
 
-   private String policyHolderFirstName;
-   private String policyHolderLastName;
-   private int policyHolderAge;
+   private String firstName;
+   private String lastName;
+   private int age;
     
-   private String policyHolderSmokingStatus;
+   private String smokingStatus;
     
-   private double policyHolderHeightInches;
-   private double policyHolderWeightPounds;
+   private double heightInches;
+   private double weightPounds;
    
-   public Policy() {
-      policyHolderFirstName = "";
-      policyHolderLastName = "";
-      policyHolderAge = 0;
+   public PolicyHolder() {
+      firstName = "";
+      lastName = "";
+      age = 0;
         
-      policyHolderSmokingStatus = "";
+      smokingStatus = "";
         
-      policyHolderHeightInches = 0;
-      policyHolderWeightPounds = 0;
+      heightInches = 0;
+      weightPounds = 0;
 
    }
    
-   public Policy(String policyHolderFirstName, 
-            String policyHolderLastName, int policyHolderAge, String policyHolderSmokingStatus, 
-            double policyHolderHeightInches, double policyHolderWeightPounds) {
-        this.policyHolderFirstName = policyHolderFirstName;
-        this.policyHolderLastName = policyHolderLastName;
-        this.policyHolderAge = policyHolderAge;
+   public PolicyHolder(String firstName, 
+            String lastName, int age, String smokingStatus, 
+            double heightInches, double weightPounds) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
         
-        this.policyHolderSmokingStatus = policyHolderSmokingStatus;
+        this.smokingStatus = smokingStatus;
         
-        this.policyHolderHeightInches = policyHolderHeightInches;
-        this.policyHolderWeightPounds = policyHolderWeightPounds;
+        this.heightInches = heightInches;
+        this.weightPounds = weightPounds;
     }
     
-    public String getPolicyHolderFirstName() {
-        return policyHolderFirstName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getPolicyHolderLastName() {
-        return policyHolderLastName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public int getPolicyHolderAge() {
-        return policyHolderAge;
+    public int getAge() {
+        return age;
     }
 
     public String getSmokingStatus() {
-        return policyHolderSmokingStatus;
+        return smokingStatus;
     }
 
-    public double getPolicyHolderHeightInches() {
-        return policyHolderHeightInches;
+    public double getHeightInches() {
+        return heightInches;
     }
 
-    public double getPolicyHolderWeightPounds() {
-        return policyHolderWeightPounds;
+    public double getWeightPounds() {
+        return weightPounds;
     }
 
    /**
@@ -63,7 +63,45 @@ public class PolicyHolder {
     
     @return the policyholder's BMI
     */
-    public double getPolicyHolderBMI() {
-        return (policyHolderWeightPounds * 703 ) / (Math.pow(policyHolderHeightInches, 2));
+    public double getBMI() {
+        return (weightPounds * 703 ) / (Math.pow(heightInches, 2));
+    }
+    
+   @Override
+    public String toString() {
+        /*
+        String.format("Policyholder's First Name: %s%n", policyHolder.getFirstName());
+            System.out.printf("Policyholder's Last Name: %s%n", policyHolder.getLastName());
+            System.out.printf("Policyholder's Age: %d%n", policyHolder.getAge());
+
+            System.out.printf("Policyholder's Smoking Status: %s%n", policyHolder.getSmokingStatus());
+
+            System.out.printf("Policyholder's Height: %.1f inches%n", policyHolder.getHeightInches());
+            System.out.printf("Policyholder's Weight: %.1f pounds%n", policyHolder.getWeightPounds());
+            System.out.printf("Policyholder's BMI: %.2f%n", policyHolder.getBMI());
+
+            System.out.printf("Policy Price: $%.2f%n", policy.getPrice());
+        */
+        
+        StringBuilder stringBuilder = new StringBuilder();
+        
+        stringBuilder.append("Policyholder's First Name: ").append(firstName).append("\n")
+                .append("Policyholder's Last Name: ").append(lastName).append("\n")
+                .append("Policyholder's Age: ").append(age).append("\n")
+                .append("Policyholder's Smoking Status: ").append(smokingStatus).append("\n");
+        
+        String heightInchesTenthsPlace = String.format("%.1f", heightInches);
+        stringBuilder.append("Policyholder's Height: ").append(heightInchesTenthsPlace)
+                .append(" inches").append("\n");
+        
+        String weightPoundsTenthsPlace = String.format("%.1f", weightPounds);
+        stringBuilder.append("Policyholder's Weight: ").append(weightPoundsTenthsPlace)
+                .append(" pounds").append("\n");
+        
+        String bmiHundredthsPlace = String.format("%.2f", getBMI());        
+        stringBuilder.append("Policyholder's BMI: ").append(bmiHundredthsPlace).append("\n");
+        
+        return stringBuilder.toString();
+        
     }
 }
