@@ -44,10 +44,6 @@ public class Policy {
         return policyHolder;
     }
     /**
-    I'M REALLY CONFUSED ABOUT THE INSTRUCTIONS. I NEED TO CHANGE THIS METHOD SO THAT IT GETS THE POLICY HOLDER INFO FROM A POLICY HOLDER CLASS. BUT I'M
-    UNSURE HOW I SHOULD GO ABOUT DOING THIS. Should I have a PolicyHolder field inside this class? Should I make the constructor take in a PolicyHolder
-    object?
-    
     Calculates and returns the insurance policy's price in U.S. Dollars.
     
     @return price in USD
