@@ -44,26 +44,10 @@ public class Project_daniel_semakov {
         }
 
         for (Policy policy : policies) {
-            System.out.printf("Policy Number: %d%n", policy.getPolicyNum());
-            System.out.printf("Provider Name: %s%n", policy.getProviderName());
-
-            PolicyHolder policyHolder = policy.getPolicyHolder();
-            
-            System.out.printf("Policyholder's First Name: %s%n", policyHolder.getFirstName());
-            System.out.printf("Policyholder's Last Name: %s%n", policyHolder.getLastName());
-            System.out.printf("Policyholder's Age: %d%n", policyHolder.getAge());
-
-            System.out.printf("Policyholder's Smoking Status: %s%n", policyHolder.getSmokingStatus());
-
-            System.out.printf("Policyholder's Height: %.1f inches%n", policyHolder.getHeightInches());
-            System.out.printf("Policyholder's Weight: %.1f pounds%n", policyHolder.getWeightPounds());
-            System.out.printf("Policyholder's BMI: %.2f%n", policyHolder.getBMI());
-
-            System.out.printf("Policy Price: $%.2f%n", policy.getPrice());
-
-            System.out.println();
+            System.out.println(policy + "\n");
         }
 
+        System.out.printf("There were %d Policy objects created.%n", Policy.getNumPolicyObjects());
         displaySmokingStatuses(policies);
     }
 
