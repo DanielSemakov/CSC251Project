@@ -69,20 +69,6 @@ public class PolicyHolder {
     
    @Override
     public String toString() {
-        /*
-        String.format("Policyholder's First Name: %s%n", policyHolder.getFirstName());
-            System.out.printf("Policyholder's Last Name: %s%n", policyHolder.getLastName());
-            System.out.printf("Policyholder's Age: %d%n", policyHolder.getAge());
-
-            System.out.printf("Policyholder's Smoking Status: %s%n", policyHolder.getSmokingStatus());
-
-            System.out.printf("Policyholder's Height: %.1f inches%n", policyHolder.getHeightInches());
-            System.out.printf("Policyholder's Weight: %.1f pounds%n", policyHolder.getWeightPounds());
-            System.out.printf("Policyholder's BMI: %.2f%n", policyHolder.getBMI());
-
-            System.out.printf("Policy Price: $%.2f%n", policy.getPrice());
-        */
-        
         StringBuilder stringBuilder = new StringBuilder();
         
         stringBuilder.append("Policyholder's First Name: ").append(firstName).append("\n")
