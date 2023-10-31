@@ -6,7 +6,7 @@ public class Policy {
     private static int numPolicyObjects = 0;
     
     /**
-    Assign default values to fields
+    No-argument constructor: Assign default values to fields
     */
     public Policy() {
         policyNum = 0;
@@ -17,33 +17,48 @@ public class Policy {
     }
 
     /**
-    Assign inputted values to all fields
+    Argument-constructor: Assign inputted values to all fields
     
-    @param policyNum
-    @param providerName
-    @param policyHolder
+    @param policyNum the number associated with the insurance policy
+    @param providerName the name of the provider of the insurance policy
+    @param policyHolder the person who owns the insurance policy
     */
-
     public Policy(int policyNum, String providerName, PolicyHolder policyHolder) {
         this.policyNum = policyNum;
         this.providerName = providerName;
-        this.policyHolder = policyHolder;
+        this.policyHolder = new PolicyHolder(policyHolder);
         
         numPolicyObjects++;
     }
 
+    /**
+    @return the number associated with the insurance policy
+    */
     public int getPolicyNum() {
         return policyNum;
     }
 
+    /**
+    @return the name of the provider of the insurance policy
+    */
     public String getProviderName() {
         return providerName;
     }
 
-    public PolicyHolder getPolicyHolder() {
-        return policyHolder;
-    }
     /**
+    @return the person who owns the insurance policy 
+    */
+    public PolicyHolder getPolicyHolder() {
+        return new PolicyHolder(policyHolder);
+    }
+    
+    /**
+    @return the number of PolicyHolder objects that have been created since the program started 
+    */
+    public static int getNumPolicyObjects() {
+        return numPolicyObjects;
+    }
+    /**   
     Calculates and returns the insurance policy's price in U.S. Dollars.
     
     @return price in USD
@@ -76,6 +91,9 @@ public class Policy {
         return totalPrice;
     } 
     
+    /**
+    @return a String with an organized list of all the insurance policy info 
+    */
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
